@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Background layers ── */
+  --color-bg-base: #0B1020;
+  --color-bg-surface: #111827;
+  --color-bg-elevated: #182235;
+  --color-bg-card: #141C2F;
+  --color-bg-hover: #1E293B;
+
+  /* ── Tailwind-compatible surface aliases ── */
+  --color-surface: #0B1020;
+  --color-surface-light: #141C2F;
+  --color-surface-lighter: #182235;
+  --color-surface-card: #141C2F;
+
+  /* ── Primary palette ── */
+  --color-primary: #8B5CF6;
+  --color-primary-dark: #7C3AED;
+  --color-primary-light: #A78BFA;
+  --color-primary-glow: rgba(139, 92, 246, 0.15);
+
+  /* ── Secondary ── */
+  --color-secondary: #06B6D4;
+  --color-secondary-light: #22D3EE;
+
+  /* ── Semantic ── */
+  --color-accent-green: #22C55E;
+  --color-accent-red: #EF4444;
+  --color-accent-amber: #F59E0B;
+  --color-accent-blue: #3B82F6;
+  --color-accent-purple: #A78BFA;
+  --color-accent-teal: #06B6D4;
+
+  /* ── Text ── */
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
+  --color-text-dim: #64748B;
+
+  /* ── Borders ── */
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.04);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+
+  /* ── Typography ── */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-text-primary font-sans antialiased m-0;
+    /* Atmospheric layered gradient */
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.08), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(6, 182, 212, 0.04), transparent),
+      radial-gradient(ellipse 50% 50% at 20% 80%, rgba(139, 92, 246, 0.03), transparent),
+      #0B1020;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Refined scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.12);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.22);
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(139, 92, 246, 0.3);
+    color: #F8FAFC;
+  }
+}
