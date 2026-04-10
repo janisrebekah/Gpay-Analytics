@@ -1,8 +1,7 @@
+
 # GPay Analytics
 
 A full-stack expense analytics dashboard that parses Google Pay transaction data from Google Takeout HTML files, classifies transactions by category, and generates actionable spending insights.
-
-![Dashboard](frontend/public/screenshot.png)
 
 ## Features
 
@@ -46,6 +45,10 @@ gpay/
         ├── pages/          # Upload & Dashboard pages
         └── utils/          # Formatting helpers
 ```
+<img width="1919" height="906" alt="Screenshot 2026-04-11 023611" src="https://github.com/user-attachments/assets/2e8064b4-c401-490f-9582-7000a98cbee5" />
+<img width="1919" height="962" alt="Screenshot 2026-04-11 023658" src="https://github.com/user-attachments/assets/7a9d60e2-28de-4725-a2a9-f6f6503e2937" />
+<img width="1910" height="831" alt="Screenshot 2026-04-11 023813" src="https://github.com/user-attachments/assets/bdaee5ca-08c3-4f20-adf0-efa7721304fa" />
+
 
 ## Getting Started
 
